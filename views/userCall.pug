@@ -1,0 +1,111 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Звонок
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous")
+        script(src="https://unpkg.com/axios/dist/axios.min.js")
+        script(src="https://unpkg.com/sweetalert/dist/sweetalert.min.js")
+        link(href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css")
+        link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous")
+        link(rel="stylesheet" href="/stylesheets/dozvon.css")
+    body
+        input#yandexid.form-control(type="hidden", name="yandexID", value= yandex)
+        input#base.form-control(type="hidden", name="base", value= base)
+        input#phoneNumber.form-control(type="hidden", name="phoneNumber")
+        input#company.form-control(type="hidden", name="company")
+        .container-fluid.br
+            .row
+                .col-lg-4.company.text-center.pt-2
+                    .btn-group(role="group" aria-label="Basic example")
+                        button#prevNumber.btn.btn-info.of
+                            i.fas.fa-angle-left.on
+                        h1#companyName Название компании
+                        button#nextNumber.btn.btn-info.of
+                            i.fas.fa-angle-right.on
+                    #phone
+                .col-lg-8.sz
+                    iframe.script(src="/scenario/MO/Begin.html")
+        .container-fluid.pt-3
+            .row
+                .col-lg-4.text-center
+                    button.btn.btn-info.black(role="button") Закончить Разговор
+                .col-lg-4
+                    .col-lg-4.text-center
+                        button.btn.btn-info.black(role="button") Отправить статус
+                .col-lg-4.text-center
+                    button.btn.btn-danger.black(role="button") Завершить Работу
+        .container-fluid.pt-2
+            .row
+                .col-lg-2.text-center
+                    .btn-group-vertical(role="group" aria-label="Basic example")
+                        button.btn.btn-secondary.off(role="button") Лид
+                        button.btn.btn-secondary.off(role="button") Перезвонить
+                        button.btn.btn-secondary.off(role="button") Отказ
+                .col-lg-10
+                    .row
+                        .col-lg-3
+                            .form-group
+                                select#selectLeed.form-control
+                                    option(disabled="" selected="") Выберите проект
+                                    option Good Morning
+                                    option Key to Call
+                        .col-lg-3
+                            .form-group
+                                select#selectLeedStatus.form-control
+                                    option(disabled="" selected="") Выберите направление
+                                    option Юр. Лица
+                                    option Физ. Лица
+                                    option Местный
+                                    option Удаленный
+                        .col-lg-3
+                            #dateLead.form-group.form-check
+                                label
+                                    input#date_lead.form-control(type="date")
+                        .col-lg-3
+                            #timeLead.form-group.form-check
+                                label
+                                    input#time_lead.form-control(type="Time")
+                        .col-lg-3
+                            .form-group
+                                select#selectRecallProject.form-control
+                                    option(selected="" disabled="") Выберите проект
+                                    option Good Morning
+                                    option Key to Call
+                        .col-lg-3
+                            .form-group
+                                select#selectRecallReason.form-control
+                                    option(disabled="" selected="") Выберите статус
+                                    option Связь с Лпр
+                                    option Приветствие Лпр Good Morning
+                                    option Презентация Good Morning
+                                    option Рассчет Стоимости Good Morning
+                                    option Приветствие Лпр Key to Call
+                                    option Местный Key to Call
+                                    option Удаленный Key to Call
+                                    option Закрытие Key to Call
+                        .col-lg-3
+                            #recallDate.form-group.form-check
+                                input#date_recall.form-control(type="date")
+                        .col-lg-3
+                            #recallTime.form-group.form-check
+                                input#time_recall.form-control(type="Time")
+                        .col-lg-3
+                            .form-group
+                                select#selectDeny.form-control
+                                    option(disabled="" selected="") Выберите причину
+                                    option(value="offer") Коммерческое предложение
+                                    option Не актуально
+                                    option Не интересует
+                                    option Конкурент
+                                    option Сброс
+                                    option Цена
+                                    option Bonobo
+                        .col-lg-8
+                            .form-group.form-check
+                                input#lprEmailInput.form-control(type="email" aria-describedby="emailHelp" placeholder="E-mail")
+        script(src="https://api.yandex.mightycall.ru/api/v3/sdk/mightycall.webphone.sdk.js")
+        script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous")
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous")
+        script(type="text/javascript" src="/javascripts/call.js")

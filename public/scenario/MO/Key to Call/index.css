@@ -1,0 +1,18 @@
+body{
+    background: #ffa600;
+    color: black;
+}
+.btn{
+    background: black;
+    color: white;
+    font-size: 32px;
+    border-radius: 10px;
+    border: 3px black;
+}
+.btn1{
+    background: white;
+    color: black;
+    font-size: 32px;
+    border-radius: 10px;
+    border: 3px black;
+}

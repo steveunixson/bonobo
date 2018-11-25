@@ -1,0 +1,54 @@
+body{
+    background: #ffa600;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+.company{
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: black;
+}
+.sz{
+    height: 600px
+}
+.script{
+    width: 100%;
+    height: 100%;
+    border-width: 0px;
+    border-color: black;
+}
+.on{
+    font-size: 48px;
+    color: #ffa600;
+}
+.of{
+    background: black;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: black;
+}
+.black{
+    background: black;
+    color: #ffa600;
+    height: 60px;
+    width: 320px;
+    font-size: 32px;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: black;
+}
+.br{
+    border-width: 2px;
+    border-color: black;
+}
+.off{
+    background: black;
+    color: #ffa600;
+    width: 160px;
+    height: 50px;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: black;
+    font-weight: bolder;
+}

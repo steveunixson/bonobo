@@ -1,0 +1,28 @@
+body{
+    font-family: "Lohit Odia";
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    background: #ffa600;
+    color: black;
+}
+.btn{
+    font-weight: bolder;
+    font-size: 24px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: black;
+}
+.script{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border-width: 0.2px;
+    border-color: black;
+}
+.col{
+    height: 1300px;
+}
+.size{
+    height: 400px;
+}

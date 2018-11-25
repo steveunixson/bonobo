@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор</title>
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 text center">
+            <div class="form-group">
+                <label for="operators">Подскажите, какое кол-во операторов вам нужно?</label>
+                <input type="number" class="form-control" id="operators">
+            </div>
+        </div>
+        <div class="col-lg-12 text center">
+            <div class="form-group text center">
+                <label for="package">Подскажите какое готовое решение вам подошло бы больше?</label>
+                <select class="form-control" id="package" onchange="hideSoftware()">
+                    <option selected disabled>Выбрать пакет по мебели</option>
+                    <option value="min">Минимальный</option>
+                    <option value="max">Оптимальный</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-12 text center">
+            <div class="form-group text center">
+                <label for="packageSoftware">И какой вариант програмного обеспечения вам подойдет?</label>
+                <select class="form-control" id="packageSoftware">
+                    <option selected disabled>Выбрать пакет по програмному обеспечению</option>
+                    <option value="min">Минимальный</option>
+                    <option value="max">Оптимальный</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-12 text center">
+            <button class="btn btn-dark btn-lg btn-block" onclick="cost()">Рассчитать стоимость</button>
+        </div>
+        <div class="col-lg-5 text center">
+            <h1>Итак стоить это будет:</h1>
+        </div>
+        <div class="col-lg-7 text center">
+            <h1 id="total"></h1>
+        </div>
+        <div class="col-lg-12 text center">
+            <button class="btn btn-danger btn-lg btn-block btn1" onclick="clearResult()">Очистить</button>
+        </div>
+    </div>
+</div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+</body>
+</html>

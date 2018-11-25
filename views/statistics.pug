@@ -1,0 +1,43 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title= title
+        link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.5.0/css/all.css', integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU', crossorigin='anonymous')
+        link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin='anonymous')
+        link(rel='stylesheet', href='/stylesheets/statistics.css')
+    body
+        .container-fluid.pt-2
+            .row.text-center
+                .col-lg-6
+                    a.btn.btn-secondary.q(type='button', href='/admin/statistics?user=user') Младшие Операторы
+                .col-lg-6
+                    a.btn.btn-secondary.q(type='button', href='/admin/statistics?user=manager') Старшие операторы
+        br
+        .container-fluid.pt-1
+            table.table.table-bordered.text-center.table-dark.table-hover
+                thead
+                    tr.hd
+                        th(scope='col') Оператор
+                        th(scope='col') Колличество Звонков
+                        th(scope='col') Колличество Лидов
+                        th(scope='col') %
+                tbody.phone
+                    tr
+                        td dudnikova
+                        td 250
+                        td 10
+                        td 4%
+                    tr
+                        td kostromina
+                        td 100
+                        td 5
+                        td 5%
+                    tr
+                        td koncheligin
+                        td 50
+                        td 2
+                        td 5%
+        script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
+        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')

@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Calculator</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.4/js/tether.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.5.2/qs.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+	<script src="js/index.js"></script>
+</head>
+<body>
+	<div class="container pt-3">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Давайте я сориентирую вас по стоимости:</h1>
+            </div>
+            <div class="col-lg-12" id="subBase">
+               <button type="button" class="btn btn-success btn-lg btn-block" onclick="remove()">База</button>
+                <button type="button" class="btn btn-success btn-lg btn-block" onclick="show()">Подписка</button>
+            </div>
+            <div class="col-lg-12 pt-2">
+                <div class="form-group text-center">
+                    <h3>Выбрать Тип Базы</h3>
+                    <select id="business" class="form-control" id="formBase">
+                        <option>Юридические Лица</option>
+                        <option>Физические Лица</option>
+                    </select>
+                </div>
+
+            <br>
+            <div class="col-lg-12 pt-2" id="contactNumber" style="visibility: visible">
+                <h3>Какое колличество контактов вас интересует</h3>
+                <input class="form-control" type="number" id="totalContacts">
+            </div>
+            <br>
+            <div class="col-lg-12 pt-2" id="schedule" style="visibility: visible">
+                <div class="form-group text-center">
+                    <h3>Подскажите какой график работы у ваших операторов/менеджеров?</h3>
+                    <select id="duration" class="form-control">
+                        <option selected="" value="4 16">2/2 либо 3/3</option>
+                        <option value="6 24">3/1</option>
+                        <option value="6 26">6/1</option>
+                        <option value="5 21">2/1 либо 4/2</option>
+                        <option value="5 23">5/2</option>
+                    </select>
+                </div>
+            </div>
+                <div class="col-lg-12 pt-2" id="operatorNumber" style="visibility: visible">
+                    <h3>А сколько у Вас работает операторов/менеджеров?</h3>
+                    <input class="form-control" type="number" id="operators">
+                </div>
+                <div class="col-lg-12 pt-2" id="callNumber" style="visibility: visible">
+                    <h3>И сколько каждый из них делает корректных звонков за день?</h3>
+                    <input class="form-control" type="number" id="phoneCalls">
+                </div>
+                <br>
+                <div class="col-lg-12">
+                    <button type="button" class="btn btn-success btn-lg btn-block" onclick="getPricing()">Рассчитать Стоимость</button>
+                    <br>
+                    <button type="button" class="btn btn-danger btn-lg" onclick="clearResult()">Очистить</button>
+                </div>
+        </div>
+    </div>
+        <div class="container text-left">
+            <p class="text" id="sumBase"></p>
+            <p class="text" id="sumDay"></p>
+            <p class="text" id="sumWeek"></p>
+            <p class="text" id="costWeek"></p>
+            <p class="text" id="sumMonth"></p>
+            <p class="text" id="costMonth"></p>
+        </div>
+    </div>
+</body>
+</html>
+
+
